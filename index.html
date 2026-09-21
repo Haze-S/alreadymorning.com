@@ -3,147 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>벌써아침 — 게임을 만드는 팀</title>
-<meta name="description" content="벌써아침은 손그림 아트와 회사생활 이야기로 게임을 만드는 부산의 작은 개발팀입니다. 방치형 RPG 『던전 컴퍼니』를 개발·운영합니다.">
+<title>벌써아침</title>
+<meta name="description" content="벌써아침의 게임 — 던전 컴퍼니(방치형 RPG), 던전 크러시(매치3 퍼즐), 마왕님 야근 사수(아레나 서바이버).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 fill=%22%23131A2B%22/><rect x=%2210%22 y=%2210%22 width=%2212%22 height=%2212%22 fill=%22%23E8833A%22/></svg>">
 <link rel="canonical" href="https://alreadymorning.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="벌써아침">
-<meta property="og:title" content="벌써아침 — 게임을 만드는 팀">
-<meta property="og:description" content="손그림 아트와 회사생활 이야기로 게임을 만드는 부산의 작은 개발팀. 방치형 RPG 『던전 컴퍼니』 개발·운영.">
+<meta property="og:title" content="벌써아침">
+<meta property="og:description" content="벌써아침의 게임 — 던전 컴퍼니(방치형 RPG), 던전 크러시(매치3 퍼즐), 마왕님 야근 사수(아레나 서바이버).">
 <meta property="og:url" content="https://alreadymorning.com/">
 <meta property="og:image" content="https://alreadymorning.com/assets/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script src="assets/site.js" defer></script>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="container">
-    <a class="logo" href="/"><span class="sun">☀</span> 벌써아침</a>
-    <nav class="site-nav">
-      <a href="#games">만드는 게임</a>
-      <a href="/dungeon">던전 컴퍼니</a>
-      <a href="#contact">문의</a>
+<header class="hd">
+  <div class="hd-in">
+    <a class="mark" href="/"><i></i>벌써아침</a>
+    <nav class="gnb">
+      <a href="/" aria-current="page">홈</a>
+      <a href="/games">게임</a>
+      <a href="/about">회사 소개</a>
+      <a href="mailto:contact@alreadymorning.com">문의</a>
     </nav>
+    <details class="mnav">
+      <summary aria-label="메뉴 열기"><span></span><span></span><span></span></summary>
+      <div class="mnav-panel">
+        <a href="/">홈</a>
+        <a href="/games">게임</a>
+        <a href="/about">회사 소개</a>
+        <a href="mailto:contact@alreadymorning.com">문의</a>
+      </div>
+    </details>
   </div>
 </header>
 
-<section class="page-hero">
-  <div class="container">
-    <div class="chips">
-      <span class="chip blue">게임 개발</span>
-      <span class="chip blue">부산</span>
+<section class="feat">
+  <div class="in">
+    <div>
+      <span class="eyebrow on-navy">New</span>
+      <h1>던전 크러시</h1>
+      <div class="tags">
+        <span class="tag">매치3 퍼즐</span>
+        <span class="tag">Android · iOS</span>
+        <span class="tag live">출시 예정</span>
+      </div>
+      <p class="line">유저는 마왕. 마왕성에 쳐들어오는 침입자를 매치3 퍼즐로 막아내세요.</p>
+      <div class="btns">
+        <a class="btn accent" href="/crush/">게임 소개</a>
+        <a class="btn on-navy" href="/games">전체 게임</a>
+      </div>
     </div>
-    <h1>벌써아침</h1>
-    <p>밤새 던전을 지켰더니, 벌써 아침.</p>
-  </div>
-  <div class="wave" aria-hidden="true"></div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">About us</span>
-      <h2>회사 소개</h2>
+    <div class="key">
+      <img src="/assets/img/crush/crush-feature.webp" alt="던전 크러시" width="1024" height="500">
     </div>
-    <p class="lead">벌써아침은 <strong>손그림 아트와 회사생활 이야기</strong>로 게임을 만드는 부산의 작은 개발팀입니다.
-    누구나 겪는 야근·결재·KPI 같은 소재를 판타지 세계에 옮겨놓고, 색연필 낙서 같은 그림으로 풀어냅니다.
-    지금은 모바일 방치형 RPG <a href="/dungeon">던전 컴퍼니</a>를 개발·운영하며 Google Play 출시를 준비하고 있습니다.</p>
   </div>
 </section>
 
-<section class="section alt" id="games">
-  <div class="container">
-    <div class="section-head">
+<section class="sec" id="games">
+  <div class="wrap">
+    <div class="sec-head">
       <span class="eyebrow">Games</span>
-      <h2>만드는 게임</h2>
-      <p>하나의 세계관을 공유하는 게임들.</p>
+      <h2>게임</h2>
     </div>
-    <div class="card-grid game-grid">
-      <a class="card" href="/dungeon">
-        <img class="thumb" src="assets/img/card-kiwoogi.webp" alt="던전 컴퍼니" width="800" height="450">
-        <h3>던전 컴퍼니 <span class="badge">Google Play 출시 예정</span></h3>
-        <p class="meta-line">방치형 RPG · Android</p>
-        <p>마왕성이라는 던전을 운영하는 한국형 방치형 RPG.
-        간부를 채용하고 몬스터 직원을 육성해 몰려오는 용사를 막아냅니다.</p>
-        <span class="more">게임 소개 →</span>
+    <div class="lineup">
+
+      <a class="gcard" href="/dungeon">
+        <img class="shot" src="/assets/img/card-kiwoogi.webp" alt="던전 컴퍼니" width="800" height="450" loading="lazy">
+        <div class="body">
+          <h3>던전 컴퍼니</h3>
+          <div class="tags">
+            <span class="tag">방치형 RPG</span>
+            <span class="tag">Android · iOS · Web</span>
+            <span class="tag live">출시 예정</span>
+          </div>
+          <p>간부를 채용하고 몬스터 직원을 육성해 마왕성으로 몰려오는 용사를 막아냅니다.
+          접속하지 않은 동안에도 성이 자랍니다.</p>
+          <span class="go">게임 소개 →</span>
+        </div>
       </a>
-      <a class="card" href="/dungeon#overtime">
-        <img class="thumb" src="assets/img/title.webp" alt="마왕님 야근 사수" width="800" height="450">
-        <h3>마왕님 야근 사수 <span class="badge">개발 중</span></h3>
-        <p class="meta-line">아레나 서바이버 · PC(Windows)</p>
-        <p>몰려드는 결재 요청을 버티고 18:00 정시 퇴근하는 스핀오프.</p>
-        <span class="more">자세히 →</span>
+
+      <a class="gcard" href="/crush/">
+        <img class="shot" src="/assets/img/crush/card-crush.webp" alt="던전 크러시" width="800" height="450" loading="lazy">
+        <div class="body">
+          <h3>던전 크러시</h3>
+          <div class="tags">
+            <span class="tag">매치3 퍼즐</span>
+            <span class="tag">Android · iOS</span>
+            <span class="tag live">출시 예정</span>
+          </div>
+          <p>마왕성에 쳐들어오는 침입자를 매치3 퍼즐로 막아냅니다.
+          챕터 끝에는 침입자 보스가 기다립니다.</p>
+          <span class="go">게임 소개 →</span>
+        </div>
       </a>
+
+      <a class="gcard" href="/overtime">
+        <img class="shot" src="/assets/img/title.webp" alt="마왕님 야근 사수" width="1280" height="720" loading="lazy">
+        <div class="body">
+          <h3>마왕님 야근 사수</h3>
+          <div class="tags">
+            <span class="tag">아레나 서바이버</span>
+            <span class="tag">Windows</span>
+            <span class="tag">개발 중</span>
+          </div>
+          <p>결재를 요구하며 몰려드는 직원에게 반려 도장을 던지고
+          18:00 정시 퇴근을 노리는 한 판 15분짜리 게임.</p>
+          <span class="go">게임 소개 →</span>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Universe</span>
-      <h2>마왕성도 결국 회사다</h2>
-    </div>
-    <p class="lead center">회사는 마왕성, 대표는 마왕, 직원은 몬스터, 고객은 용사, 매출은 마석, KPI는 세계정복률.<br>
-    우리가 만드는 게임들은 이 하나의 세계관을 공유합니다.</p>
-  </div>
-</section>
-
-<section class="contact-band" id="contact">
-  <div class="container">
-    <div class="mascot"><img src="assets/img/maou_cheer.webp" alt="응원하는 마왕" width="130" height="130"></div>
-    <h2>문의</h2>
-    <p>출시·테스트 소식, 협업 제안, 버그 제보 모두 환영합니다.</p>
-    <a class="btn light" href="mailto:contact@alreadymorning.com">contact@alreadymorning.com</a>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <span class="logo"><span class="sun">☀</span> 벌써아침</span>
-      <p>밤새 던전을 지켰더니, 벌써 아침.<br>게임을 만드는 작은 팀.</p>
+<footer class="ft">
+  <div class="wrap ft-grid">
+    <div class="ft-brand">
+      <span class="mark"><i></i>벌써아침</span>
     </div>
     <div>
-      <h4>게임</h4>
+      <h4>Games</h4>
       <nav>
         <a href="/dungeon">던전 컴퍼니</a>
-        <a href="/dungeon#overtime">마왕님 야근 사수</a>
+        <a href="/crush/">던전 크러시</a>
+        <a href="/overtime">마왕님 야근 사수</a>
       </nav>
     </div>
     <div>
-      <h4>회사</h4>
+      <h4>Company</h4>
       <nav>
-        <a href="mailto:contact@alreadymorning.com">문의</a>
+        <a href="/about">회사 소개</a>
+        <a href="mailto:support@alreadymorning.com">게임 문의</a>
+        <a href="mailto:contact@alreadymorning.com">사업·제휴 문의</a>
       </nav>
     </div>
     <div>
-      <h4>정책</h4>
+      <h4>Legal</h4>
       <nav>
-        <a href="terms.html">이용약관</a>
-        <a href="privacy.html">개인정보처리방침</a>
-        <a href="odds.html">확률 공시</a>
+        <a href="/terms.html">이용약관</a>
+        <a href="/privacy.html">개인정보처리방침</a>
+        <a href="/odds.html">확률 공시</a>
       </nav>
     </div>
   </div>
-  <div class="container footer-biz">
-    <span>상호 벌써아침 · 대표 송현정</span>
+  <div class="wrap ft-biz">
+    <span>상호 벌써아침</span>
+    <span>대표 송현정</span>
     <span>사업자등록번호 818-10-02994</span>
     <span>통신판매업 신고번호 제 2026-부산진구-1275 호</span>
     <span>부산광역시 부산진구 연수로 29</span>
     <span>070-7954-6929</span>
   </div>
-  <div class="container footer-meta">
+  <div class="wrap ft-meta">
     <span>© 2026 벌써아침</span>
-    <a href="mailto:contact@alreadymorning.com">contact@alreadymorning.com</a>
+    <a href="mailto:support@alreadymorning.com">support@alreadymorning.com</a>
   </div>
 </footer>
-
 </body>
 </html>
