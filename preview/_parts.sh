@@ -19,24 +19,24 @@ H
 }
 
 site_header() {
-  # \$1 = current page key (home|about|games)
+  # $1 = current page key (home|about|games)
   h=""; a=""; g=""
-  case "\$1" in home) h=' aria-current="page"';; about) a=' aria-current="page"';; games) g=' aria-current="page"';; esac
+  case "$1" in home) h=' aria-current="page"';; about) a=' aria-current="page"';; games) g=' aria-current="page"';; esac
 cat <<H
 <header class="hd">
   <div class="hd-in">
     <a class="mark" href="index.html"><i></i>벌써아침</a>
     <nav class="gnb">
-      <a href="index.html"\$h>홈</a>
-      <a href="dungeon.html"\$g>게임</a>
-      <a href="about.html"\$a>회사 소개</a>
+      <a href="index.html"$h>홈</a>
+      <a href="games.html"$g>게임</a>
+      <a href="about.html"$a>회사 소개</a>
       <a href="mailto:contact@alreadymorning.com">문의</a>
     </nav>
     <details class="mnav">
       <summary aria-label="메뉴 열기"><span></span><span></span><span></span></summary>
       <div class="mnav-panel">
         <a href="index.html">홈</a>
-        <a href="dungeon.html">게임</a>
+        <a href="games.html">게임</a>
         <a href="about.html">회사 소개</a>
         <a href="mailto:contact@alreadymorning.com">문의</a>
       </div>
@@ -56,9 +56,9 @@ cat <<'H'
     <div>
       <h4>Games</h4>
       <nav>
-        <a href="dungeon.html#company">던전 컴퍼니</a>
-        <a href="dungeon.html#crush">던전 크러시</a>
-        <a href="dungeon.html#overtime">마왕님 야근 사수</a>
+        <a href="dungeon.html">던전 컴퍼니</a>
+        <a href="crush.html">던전 크러시</a>
+        <a href="overtime.html">마왕님 야근 사수</a>
       </nav>
     </div>
     <div>
