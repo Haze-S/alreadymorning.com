@@ -52,7 +52,6 @@ cat <<'H'
   <div class="wrap ft-grid">
     <div class="ft-brand">
       <span class="mark"><i></i>벌써아침</span>
-      <p>회사생활을 게임으로 만드는 부산의 개발팀.<br>밤새 던전을 지켰더니, 벌써 아침.</p>
     </div>
     <div>
       <h4>Games</h4>
