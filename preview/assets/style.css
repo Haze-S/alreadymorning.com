@@ -1,0 +1,228 @@
+/* 벌써아침 — v3 리디자인 시안 (딥네이비 + 오렌지, 넥슨·NC 참고)
+   웹폰트 1종(Noto Sans KR) · 외부 프레임워크 없음 · JS 없음 */
+
+:root{
+  --navy:#131A2B;
+  --navy-2:#1C2540;
+  --ink:#181C25;
+  --bg:#ffffff;
+  --surface:#F4F6F9;
+  --line:#E3E7ED;
+  --line-2:#CBD2DC;
+  --muted:#6B7280;
+  --sun:#E8833A;
+  --sun-ink:#B25E13;      /* 흰 배경 위 텍스트용(대비 확보) */
+  --maxw:1120px;
+  --gut:20px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  color:var(--ink);
+  background:var(--bg);
+  word-break:keep-all;
+  overflow-wrap:anywhere;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:var(--sun-ink);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{font-weight:900;letter-spacing:-.03em;line-height:1.3;color:var(--navy)}
+:focus-visible{outline:2px solid var(--sun);outline-offset:3px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+.eyebrow{
+  display:block;margin:0 0 14px;
+  font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--sun-ink);
+}
+.eyebrow.on-navy{color:var(--sun)}
+.muted{color:var(--muted)}
+
+/* ── 헤더 ───────────────────────────────── */
+.hd{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff}
+.hd-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);
+  display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.mark{display:flex;align-items:center;gap:9px;font-weight:900;font-size:1.05rem;
+  letter-spacing:-.02em;color:#fff;flex:0 0 auto}
+.mark:hover{text-decoration:none}
+.mark i{width:11px;height:11px;background:var(--sun);display:block;flex:0 0 auto}
+.gnb{display:flex;gap:28px;font-size:.92rem;font-weight:500}
+.gnb a{color:#C7CEDC;padding:4px 0;border-bottom:2px solid transparent}
+.gnb a:hover{color:#fff;text-decoration:none}
+.gnb a[aria-current]{color:#fff;font-weight:700;border-bottom-color:var(--sun)}
+
+/* 모바일 메뉴 — JS 없이 <details> */
+.mnav{display:none;position:relative}
+.mnav>summary{list-style:none;cursor:pointer;width:40px;height:40px;
+  display:flex;flex-direction:column;justify-content:center;gap:5px;padding:0 8px}
+.mnav>summary::-webkit-details-marker{display:none}
+.mnav>summary span{display:block;height:2px;background:#fff}
+.mnav[open]>summary span:nth-child(2){opacity:.35}
+.mnav-panel{position:absolute;right:0;top:48px;min-width:210px;
+  background:var(--navy-2);border:1px solid rgba(255,255,255,.14);
+  display:flex;flex-direction:column;padding:8px 0}
+.mnav-panel a{color:#D6DCE8;padding:11px 18px;font-size:.95rem}
+.mnav-panel a:hover{background:rgba(255,255,255,.07);text-decoration:none}
+
+/* ── 홈 히어로 ──────────────────────────── */
+.hero{padding:104px 0 96px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2.15rem,6.2vw,4rem);margin:0 0 26px;max-width:16em}
+.hero .lead{font-size:clamp(1rem,1.9vw,1.18rem);color:#3C4453;margin:0 0 36px;max-width:40em}
+.hero .sig{margin:44px 0 0;padding-top:22px;border-top:1px solid var(--line);
+  font-size:.9rem;color:var(--muted);letter-spacing:.01em}
+
+/* ── 버튼 ───────────────────────────────── */
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;
+  padding:14px 26px;border-radius:3px;font-weight:700;font-size:.95rem;
+  background:var(--navy);color:#fff;border:1.5px solid var(--navy);
+  transition:background .15s,color .15s,border-color .15s}
+.btn:hover{text-decoration:none;background:#000;border-color:#000}
+.btn.accent{background:var(--sun);border-color:var(--sun);color:#fff}
+.btn.accent:hover{background:#D0701F;border-color:#D0701F}
+.btn.ghost{background:transparent;color:var(--navy);border-color:var(--line-2)}
+.btn.ghost:hover{background:var(--surface);border-color:var(--navy)}
+.btn.on-navy{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn.on-navy:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+/* ── 섹션 ───────────────────────────────── */
+.sec{padding:96px 0}
+.sec.surface{background:var(--surface)}
+.sec.navy{background:var(--navy);color:#C7CEDC}
+.sec.navy h2,.sec.navy h3{color:#fff}
+.sec-head{margin:0 0 48px;max-width:46em}
+.sec-head h2{font-size:clamp(1.65rem,3.6vw,2.5rem);margin:0 0 14px}
+.sec-head p{margin:0;color:var(--muted);font-size:1.02rem}
+.sec.navy .sec-head p{color:#9AA5B8}
+
+/* ── 게임 라인업 카드 ───────────────────── */
+.lineup{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(288px,1fr))}
+.gcard{display:flex;flex-direction:column;background:#fff;
+  border:1px solid var(--line);border-radius:4px;overflow:hidden;color:var(--ink);
+  transition:border-color .16s,box-shadow .16s,transform .16s}
+.gcard:hover{text-decoration:none;border-color:var(--line-2);transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(19,26,43,.09)}
+.gcard .shot{aspect-ratio:16/9;width:100%;object-fit:cover;background:var(--surface);
+  border-bottom:1px solid var(--line)}
+.gcard .body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
+.gcard h3{font-size:1.24rem;margin:0 0 12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.tag{font-size:.73rem;font-weight:700;letter-spacing:.02em;padding:3px 9px;border-radius:2px;
+  background:var(--surface);color:#4A5364;border:1px solid var(--line)}
+.tag.live{background:#FDF1E6;color:var(--sun-ink);border-color:#F3D6B8}
+.gcard p{margin:0 0 20px;font-size:.94rem;color:#4A5364;line-height:1.7}
+.gcard .go{margin-top:auto;font-weight:700;font-size:.9rem;color:var(--sun-ink)}
+.gcard:hover .go{text-decoration:underline}
+
+/* ── 페이지 히어로(하위 페이지) ─────────── */
+.phero{background:var(--navy);color:#C7CEDC;padding:72px 0 76px}
+.phero h1{color:#fff;font-size:clamp(1.9rem,4.6vw,3rem);margin:0 0 18px}
+.phero p{margin:0;max-width:44em;font-size:1.04rem;color:#A8B2C4}
+.phero .btns{margin-top:30px}
+.phero .tags{margin-bottom:18px}
+.phero .tag{background:rgba(255,255,255,.08);color:#C7CEDC;border-color:rgba(255,255,255,.18)}
+
+/* ── 본문 타이포 ────────────────────────── */
+.prose{max-width:44em}
+.prose p{margin:0 0 18px}
+.prose>p:first-child{font-size:1.1rem;color:#333A47}
+.prose ul{margin:0 0 20px;padding-left:1.15em}
+.prose li{margin:0 0 10px}
+.prose h3{font-size:1.2rem;margin:36px 0 12px}
+
+/* ── 게임 블록(던전 페이지 3작품) ──────── */
+.gblock{display:grid;gap:44px;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+  align-items:start;padding:64px 0;border-top:1px solid var(--line)}
+.gblock:first-of-type{border-top:0;padding-top:0}
+.gblock .num{font-size:.78rem;font-weight:900;letter-spacing:.16em;color:var(--sun-ink);margin:0 0 10px}
+.gblock h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 14px}
+.gblock .art img{border:1px solid var(--line);border-radius:4px;width:100%}
+.gblock .btns{margin-top:24px}
+
+/* ── 스크린샷 스트립 ────────────────────── */
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:min(210px,56vw);gap:14px;
+  overflow-x:auto;padding-bottom:14px;scroll-snap-type:x mandatory}
+.strip figure{margin:0;scroll-snap-align:start}
+.strip img{border:1px solid var(--line);border-radius:4px;width:100%}
+.strip figcaption{font-size:.8rem;color:var(--muted);margin-top:8px;line-height:1.5}
+
+/* ── 정보 표(회사 소개) ─────────────────── */
+.facts{width:100%;border-collapse:collapse;font-size:.95rem;max-width:44em}
+.facts th,.facts td{text-align:left;padding:14px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.facts th{width:12em;font-weight:700;color:var(--navy);padding-right:16px}
+
+/* ── 문서 페이지 ────────────────────────── */
+.doc{max-width:46em;margin:0 auto;padding:56px var(--gut) 88px}
+.doc h2{font-size:1.22rem;margin:44px 0 14px;padding-top:22px;border-top:1px solid var(--line)}
+.doc h2:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.doc h3{font-size:1.02rem;margin:26px 0 10px}
+.doc p,.doc li{font-size:.97rem;line-height:1.85}
+.doc ul,.doc ol{padding-left:1.2em;margin:0 0 18px}
+.doc li{margin:0 0 8px}
+.doc table{width:100%;border-collapse:collapse;margin:0 0 22px;font-size:.93rem}
+.doc th,.doc td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
+.doc th{background:var(--surface);font-weight:700;color:var(--navy);white-space:nowrap}
+.doc .revised{font-size:.88rem;color:var(--muted);margin:0 0 40px}
+
+/* ── 푸터 ───────────────────────────────── */
+.ft{background:var(--navy);color:#8E99AC;font-size:.9rem;padding:64px 0 40px}
+.ft-grid{display:grid;gap:36px;grid-template-columns:1.6fr 1fr 1fr 1fr;
+  padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+.ft-brand .mark{font-size:1.1rem;margin-bottom:12px}
+.ft-brand p{margin:0;font-size:.88rem;line-height:1.7;color:#7B8699}
+.ft h4{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:#6C7789;margin:0 0 14px}
+.ft nav{display:flex;flex-direction:column;gap:10px}
+.ft a{color:#B6BFCE}
+.ft a:hover{color:var(--sun);text-decoration:none}
+.ft-biz{display:flex;flex-wrap:wrap;gap:6px 20px;padding-top:26px;font-size:.83rem;color:#6C7789}
+.ft-biz span::after{content:"";}
+.ft-meta{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;
+  padding-top:16px;font-size:.83rem;color:#6C7789}
+.ft-meta a{color:#6C7789}
+
+/* ── 404 ────────────────────────────────── */
+.nf{max-width:var(--maxw);margin:0 auto;padding:130px var(--gut);text-align:left}
+.nf h1{font-size:clamp(1.9rem,5vw,3rem);margin:0 0 16px}
+.nf p{color:var(--muted);margin:0 0 32px;max-width:34em}
+
+/* ── 반응형 ─────────────────────────────── */
+@media (max-width:900px){
+  .ft-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .gblock{grid-template-columns:1fr;gap:28px;padding:48px 0}
+}
+@media (max-width:760px){
+  .gnb{display:none}
+  .mnav{display:block}
+  .hero{padding:64px 0 60px}
+  .sec{padding:64px 0}
+  .sec-head{margin-bottom:34px}
+  .phero{padding:52px 0 56px}
+  .doc{padding-top:40px}
+  .btn{padding:13px 20px;font-size:.92rem}
+  .ft-meta{flex-direction:column;align-items:flex-start;gap:6px}
+}
+@media (max-width:400px){
+  :root{--gut:16px}
+  .lineup{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr;gap:26px}
+  .btns{flex-direction:column;align-items:stretch}
+  .btn{justify-content:center}
+  .facts th{width:auto;display:block;border:0;padding-bottom:0}
+  .facts td{display:block;padding-top:4px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+
+/* 가로형(PC) 스크린샷 스트립 */
+.strip.wide{grid-auto-columns:min(400px,82vw)}
+/* 게임 섹션 헤더 안 서브 제목 */
+.sub-h{font-size:.78rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin:48px 0 16px}
+.sec.surface .strip img,.sec.surface .gblock .art img{background:#fff}
+.doc h1{font-size:clamp(1.6rem,4vw,2.2rem);margin:0 0 10px}
