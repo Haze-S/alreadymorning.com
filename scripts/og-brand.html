@@ -1,0 +1,21 @@
+<!doctype html><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap" rel="stylesheet">
+<style>
+ *{margin:0;box-sizing:border-box}
+ body{width:1200px;height:630px;background:#131A2B;overflow:hidden;
+      font-family:"Noto Sans KR",sans-serif;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;gap:44px;
+      position:relative}
+ body::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:#E8833A}
+ #logo{width:290px}
+ #logo svg{width:100%;height:auto;display:block}
+ .url{font-weight:500;font-size:27px;letter-spacing:.14em;color:#8C97AB}
+</style>
+<div id="logo"></div>
+<div class="url">alreadymorning.com</div>
+<script>
+fetch('logo-light.svg').then(r=>r.text()).then(t=>{
+  document.getElementById('logo').innerHTML=t;
+  document.title='ready';
+});
+</script>

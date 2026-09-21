@@ -1,0 +1,24 @@
+<!doctype html><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap" rel="stylesheet">
+<style>
+ *{margin:0;box-sizing:border-box}
+ body{width:1200px;height:630px;background:#131A2B;overflow:hidden;position:relative;
+      font-family:"Noto Sans KR",sans-serif}
+ .art{position:absolute;inset:0;background:url(crush-feature.webp) center/cover no-repeat}
+ .scrim{position:absolute;inset:0;
+        background:linear-gradient(to top,rgba(19,26,43,.94) 0%,rgba(19,26,43,.55) 42%,rgba(19,26,43,0) 72%)}
+ .bar{position:absolute;left:0;right:0;bottom:0;height:10px;background:#E8833A}
+ .txt{position:absolute;left:64px;bottom:62px;color:#fff}
+ .txt b{display:block;font-weight:900;font-size:64px;letter-spacing:-.03em}
+ .txt span{display:block;margin-top:12px;font-weight:500;font-size:27px;color:#C7CEDC}
+ #lg{position:absolute;right:58px;bottom:58px;width:132px}
+ #lg svg{width:100%;height:auto;display:block}
+</style>
+<div class="art"></div><div class="scrim"></div>
+<div class="txt"><b>던전 크러시</b><span>매치3 퍼즐 · Android · iOS · 출시 예정</span></div>
+<div id="lg"></div><div class="bar"></div>
+<script>
+fetch('logo-light.svg').then(r=>r.text()).then(t=>{
+  document.getElementById('lg').innerHTML=t; document.title='ready';
+});
+</script>
