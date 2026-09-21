@@ -242,3 +242,35 @@ h1,h2,h3,h4{font-weight:900;letter-spacing:-.03em;line-height:1.3;color:var(--na
   .feat .in{grid-template-columns:1fr;gap:28px}
   .feat .key{order:-1}
 }
+
+/* ── 확률 공시: 게임별 탭 (:target, JS 없음) ── */
+.tabnav{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 34px;border-bottom:1px solid var(--line)}
+.tabnav a{
+  padding:12px 18px;font-weight:700;font-size:.95rem;color:var(--muted);
+  border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabnav a:hover{color:var(--navy);text-decoration:none;background:var(--surface)}
+.tabpanel{display:none}
+/* 아무것도 지정되지 않았을 때 첫 탭을 보여준다 */
+#odds-company{display:block}
+.tabnav a[href="#odds-company"]{color:var(--navy);border-bottom-color:var(--sun)}
+.tabpanel:target{display:block}
+body:has(.tabpanel:target) #odds-company{display:none}
+body:has(.tabpanel:target) .tabnav a[href="#odds-company"]{color:var(--muted);border-bottom-color:transparent}
+#odds-company:target{display:block}
+body:has(#odds-company:target) .tabnav a[href="#odds-company"],
+body:has(#odds-crush:target) .tabnav a[href="#odds-crush"]{color:var(--navy);border-bottom-color:var(--sun)}
+.tabpanel h2:first-of-type{border-top:0;padding-top:0;margin-top:0}
+
+/* 공시 표 · 안내 박스 */
+table.odds{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:.92rem}
+table.odds th,table.odds td{border:1px solid var(--line);padding:9px 12px;text-align:left}
+table.odds thead th{background:var(--surface);color:var(--navy);font-weight:700;white-space:nowrap}
+table.odds .num{text-align:right;font-variant-numeric:tabular-nums}
+.notice-box{
+  border:1px solid var(--line-2);border-left:3px solid var(--sun);
+  background:var(--surface);padding:16px 18px;margin:0 0 22px;border-radius:0 3px 3px 0}
+.notice-box p{margin:0;font-size:.95rem}
+.doc .meta{font-size:.88rem;color:var(--muted)}
+.doc h1+.meta{margin:0 0 30px}
+/* 탭 딥링크 시 제목·탭바가 가려지지 않게 — 사실상 문서 최상단 유지 */
+.tabpanel{scroll-margin-top:100vh}
