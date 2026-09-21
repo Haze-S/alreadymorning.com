@@ -278,3 +278,12 @@ table.odds .num{text-align:right;font-variant-numeric:tabular-nums}
 /* 항목이 많은 법정 표는 가로 스크롤을 허용해 360px 에서도 깨지지 않게 */
 .doc table{display:block;overflow-x:auto;max-width:100%}
 @media (min-width:601px){.doc table{display:table}}
+
+/* ── 404 ── */
+.nf .code{font-size:.8rem;font-weight:900;letter-spacing:.18em;color:var(--sun-ink);margin:0 0 14px}
+.nf .links{margin:34px 0 0;padding-top:24px;border-top:1px solid var(--line)}
+.nf .links h4{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;font-weight:700}
+.nf .links nav{display:flex;flex-wrap:wrap;gap:10px 26px}
+.nf .links a{font-weight:500;color:var(--ink)}
+.nf .links a:hover{color:var(--sun-ink)}
+@media (max-width:760px){.nf{padding:64px var(--gut) 72px}}
