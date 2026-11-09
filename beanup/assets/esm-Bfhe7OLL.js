@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./web-O3WDt4-w.js","./index-OjDoE-Cp.js","./index-D0yBv5gz.css"])))=>i.map(i=>d[i]);
+import{i as e,t}from"./index-OjDoE-Cp.js";var n=e(`Preferences`,{web:()=>t(()=>import(`./web-O3WDt4-w.js`).then(e=>new e.PreferencesWeb),__vite__mapDeps([0,1,2]),import.meta.url)});export{n as Preferences};
