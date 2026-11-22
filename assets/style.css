@@ -379,7 +379,7 @@ table.odds .num{text-align:right;font-variant-numeric:tabular-nums}
 .ha-shot.art{background:linear-gradient(160deg,#EEF3F9 0%,#DCE6F3 100%)}
 .ha-shot.art img{object-fit:contain;padding:14px 0 0}
 .ha-body{display:flex;flex-direction:column;flex:1;min-width:0;padding:0 20px 18px}
-.ha-body.plain{padding-top:20px}
+.ha-body.plain{padding-top:42px} /* 배지(64 · 위로 32) + 제목 위 10 과 같은 높이 — 줄 맞춤 */
 .ha-badge{position:relative;width:64px;height:64px;margin:-32px 0 0;border-radius:16px;border:4px solid #fff;
   background:#fff;object-fit:cover;box-shadow:0 2px 4px rgba(30,35,41,.08),0 12px 24px rgba(30,35,41,.14)}
 .ha-body h3{margin:10px 0 10px;font-size:1.22rem}
