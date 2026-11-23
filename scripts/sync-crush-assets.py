@@ -19,14 +19,12 @@ except ImportError:
 
 # 원본 경로 -> (출력 파일명, 목표 크기, 크롭 여부)
 JOBS = [
-    ("store/screenshots/04-boss-cut.png",   "crush-shot-boss-cut.webp",    (540, 960),  False),
+    # 04-boss-cut(보스 컷신) · feature-1024x500(그래픽 이미지)은 가운데에서 뻗는 방사 줄무늬 바탕이라 사이트에 쓰지 않는다(대표 11/18 금지 무늬, 11/22 정리)
     ("store/screenshots/05-boss-board.png", "crush-shot-boss-board.webp",  (540, 960),  False),
     ("store/screenshots/02-specials.png",   "crush-shot-specials.webp",    (540, 960),  False),
     ("store/screenshots/01-map.png",        "crush-shot-map.webp",         (540, 960),  False),
     ("store/screenshots/03-boss-card.png",  "crush-shot-boss-card.webp",   (540, 960),  False),
-    ("store/feature-1024x500.png",          "crush-feature.webp",          (1024, 500), False),
-    ("store/feature-1024x500.png",          "card-crush.webp",             (800, 450),  True),
-    ("store/icon-512.png",                  "crush-icon.webp",             (256, 256),  False),
+    ("store/icon-512.png",                  "crush-icon.webp",             (256, 256),  False),  # 보라 방사 바탕 + 노란 별은 금지 꼴 아님(CTO 11/21)
 ]
 
 QUALITY = 82

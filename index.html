@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>벌써아침</title>
-<meta name="description" content="벌써아침의 게임 — 던전 컴퍼니(방치형 RPG), 던전 크러시(매치3 퍼즐), 마왕님 야근 사수(아레나 서바이버).">
+<meta name="description" content="벌써아침의 게임 — 던전 컴퍼니(방치형 RPG), 던전 크러시(매치3 퍼즐), 위습크로스(한글 낱말 퍼즐, 출시 예정).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="벌써아침">
 <meta property="og:title" content="벌써아침">
-<meta property="og:description" content="벌써아침의 게임 — 던전 컴퍼니(방치형 RPG), 던전 크러시(매치3 퍼즐), 마왕님 야근 사수(아레나 서바이버).">
+<meta property="og:description" content="벌써아침의 게임 — 던전 컴퍼니(방치형 RPG), 던전 크러시(매치3 퍼즐), 위습크로스(한글 낱말 퍼즐, 출시 예정).">
 <meta property="og:url" content="https://alreadymorning.com/">
 <meta property="og:image" content="https://alreadymorning.com/assets/img/og.png">
 <meta property="og:image:width" content="1200">
@@ -44,81 +44,104 @@
   </div>
 </header>
 
-<section class="feat">
-  <div class="in">
-    <div>
-      <span class="eyebrow on-navy">New</span>
-      <h1>던전 크러시</h1>
-      <div class="tags">
-        <span class="tag">매치3 퍼즐</span>
-        <span class="tag">Android · iOS</span>
-        <span class="tag live">출시 예정</span>
-      </div>
-      <p class="line">유저는 마왕. 마왕성에 쳐들어오는 침입자를 매치3 퍼즐로 막아내세요.</p>
-      <div class="btns">
-        <a class="btn accent" href="/crush/">게임 소개</a>
-        <a class="btn on-navy" href="/games">전체 게임</a>
+<section class="ha-hero" aria-labelledby="ha-title">
+  <div class="ha-in">
+    <div class="ha-copy">
+      <span class="ha-chip">벌써아침</span>
+      <h1 id="ha-title" class="ha-title">시간 가는 줄 모르고<br> 빠져드는 게임을 만듭니다</h1>
+      <p class="ha-line">장르를 정해두지 않는 인디 게임 개발사<span class="ha-genres"><span>방치형 RPG ·</span> <span>매치3 퍼즐 ·</span> <span>한글 낱말 퍼즐</span></span></p>
+      <div class="ha-btns">
+        <a class="ha-btn" href="#games">게임 둘러보기</a>
+        <a class="ha-btn ghost" href="/about">회사 소개</a>
       </div>
     </div>
-    <div class="key">
-      <img src="/assets/img/crush/crush-feature.webp" alt="던전 크러시" width="1024" height="500">
+    <div class="ha-art" aria-hidden="true">
+      <img class="ha-back" src="/assets/img/home/crush-cover.webp" alt="" width="768" height="432">
+      <img class="ha-front" src="/assets/img/home/dc-cover.webp" alt="" width="1024" height="576">
+      <img class="ha-icon" src="/assets/img/home/dc-icon.webp" alt="" width="72" height="72">
     </div>
   </div>
 </section>
 
-<section class="sec" id="games">
+<section class="ha-games" id="games" aria-labelledby="games-title">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Games</span>
-      <h2>게임</h2>
-    </div>
-    <div class="lineup">
+    <h2 id="games-title" class="ha-h2">게임</h2>
+    <div class="ha-cards">
 
-      <a class="gcard" href="/dungeon">
-        <img class="shot" src="/assets/img/card-kiwoogi.webp" alt="던전 컴퍼니" width="800" height="450" loading="lazy">
-        <div class="body">
-          <h3>던전 컴퍼니</h3>
-          <div class="tags">
-            <span class="tag">방치형 RPG</span>
-            <span class="tag">Android · iOS · Web</span>
-            <span class="tag live">출시 예정</span>
+      <article class="ha-card">
+        <a class="ha-shot" href="/dungeon" tabindex="-1" aria-hidden="true"><img src="/assets/img/home/dc-cover.webp" alt="" width="1024" height="576" loading="lazy"></a>
+        <div class="ha-body">
+          <img class="ha-badge" src="/assets/img/home/dc-icon.webp" alt="" width="64" height="64" loading="lazy">
+          <h3><a href="/dungeon">던전 컴퍼니</a></h3>
+          <div class="ha-tags">
+            <span class="ha-tag st-live">출시</span>
+            <span class="ha-tag">방치형 RPG</span>
+            <span class="ha-tag">Android · iOS · Web</span>
           </div>
-          <p>간부를 채용하고 몬스터 직원을 육성해 마왕성으로 몰려오는 용사를 막아냅니다.
+          <p class="ha-desc">간부를 채용하고 몬스터 직원을 육성해 마왕성으로 몰려오는 용사를 막아냅니다.
           접속하지 않은 동안에도 성이 자랍니다.</p>
-          <span class="go">게임 소개 →</span>
-        </div>
-      </a>
-
-      <a class="gcard" href="/crush/">
-        <img class="shot" src="/assets/img/crush/card-crush.webp" alt="던전 크러시" width="800" height="450" loading="lazy">
-        <div class="body">
-          <h3>던전 크러시</h3>
-          <div class="tags">
-            <span class="tag">매치3 퍼즐</span>
-            <span class="tag">Android · iOS</span>
-            <span class="tag live">출시 예정</span>
+          <div class="ha-foot">
+            <div class="ha-links">
+              <a class="ha-link" href="https://play.google.com/store/apps/details?id=com.dungeoncompany.app" aria-label="던전 컴퍼니 Android 앱 받기">Android 받기</a>
+              <a class="ha-link" href="https://apps.apple.com/app/id6803359326" aria-label="던전 컴퍼니 iOS 앱 받기">iOS 받기</a>
+              <a class="ha-link" href="https://dg.alreadymorning.com" aria-label="던전 컴퍼니 웹에서 하기">웹에서 하기</a>
+              <span class="ha-link off">카페 준비 중</span>
+            </div>
+            <a class="ha-go" href="/dungeon">게임 소개 <span aria-hidden="true">→</span></a>
           </div>
-          <p>마왕성에 쳐들어오는 침입자를 매치3 퍼즐로 막아냅니다.
+        </div>
+      </article>
+
+      <article class="ha-card">
+        <a class="ha-shot" href="/crush/" tabindex="-1" aria-hidden="true"><img src="/assets/img/home/crush-cover.webp" alt="" width="768" height="432" loading="lazy"></a>
+        <div class="ha-body">
+          <img class="ha-badge" src="/assets/img/crush/crush-icon.webp" alt="" width="64" height="64" loading="lazy">
+          <h3><a href="/crush/">던전 크러시</a></h3>
+          <div class="ha-tags">
+            <span class="ha-tag st-live">출시</span>
+            <span class="ha-tag">매치3 퍼즐</span>
+            <span class="ha-tag">Android · iOS</span>
+          </div>
+          <p class="ha-desc">마왕성에 쳐들어오는 침입자를 매치3 퍼즐로 막아냅니다.
           챕터 끝에는 침입자 보스가 기다립니다.</p>
-          <span class="go">게임 소개 →</span>
-        </div>
-      </a>
-
-      <a class="gcard" href="/overtime">
-        <img class="shot" src="/assets/img/title.webp" alt="마왕님 야근 사수" width="1280" height="720" loading="lazy">
-        <div class="body">
-          <h3>마왕님 야근 사수</h3>
-          <div class="tags">
-            <span class="tag">아레나 서바이버</span>
-            <span class="tag">Windows</span>
-            <span class="tag">개발 중</span>
+          <div class="ha-foot">
+            <div class="ha-links">
+              <a class="ha-link" href="https://play.google.com/store/apps/details?id=com.alreadymorning.dungeoncrush" aria-label="던전 크러시 Android 앱 받기">Android 받기</a>
+              <a class="ha-link" href="https://apps.apple.com/app/id6819509995" aria-label="던전 크러시 iOS 앱 받기">iOS 받기</a>
+              <span class="ha-link off">카페 준비 중</span>
+            </div>
+            <a class="ha-go" href="/crush/">게임 소개 <span aria-hidden="true">→</span></a>
           </div>
-          <p>결재를 요구하며 몰려드는 직원에게 반려 도장을 던지고
-          18:00 정시 퇴근을 노리는 한 판 15분짜리 게임.</p>
-          <span class="go">게임 소개 →</span>
         </div>
-      </a>
+      </article>
 
+      <article class="ha-card">
+        <span class="ha-shot"><img src="/assets/img/home/wisp-board.webp" alt="" width="1024" height="576" loading="lazy"></span>
+        <div class="ha-body">
+          <img class="ha-badge" src="/assets/img/home/wisp-icon.webp" alt="" width="64" height="64" loading="lazy">
+          <h3>위습크로스</h3>
+          <div class="ha-tags">
+            <span class="ha-tag st-soon">출시 예정</span>
+            <span class="ha-tag">한글 낱말 퍼즐</span>
+            <span class="ha-tag">Android</span>
+          </div>
+          <p class="ha-desc">한글 가로세로 낱말 퍼즐. 칸을 누르면 단서가 보이고,
+          막히면 위습의 귓속말과 족집게로 도움을 받습니다.</p>
+          <div class="ha-foot">
+            <div class="ha-links">
+              <span class="ha-link off">스토어 준비 중</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <h3 class="ha-h3">만들고 있는 게임</h3>
+    <p class="ha-note">이름과 그림은 준비되면 공개합니다.</p>
+    <div class="ha-next">
+      <div class="ha-mini"><span class="ha-tag st-dev">개발 중</span><b>고양이 슈팅 게임</b></div>
+      <div class="ha-mini"><span class="ha-tag st-plan">기획 중</span><b>공포 게임</b></div>
+      <div class="ha-mini"><span class="ha-tag st-plan">기획 중</span><b>서브컬처 게임</b></div>
     </div>
   </div>
 </section>
@@ -133,7 +156,6 @@
       <nav>
         <a href="/dungeon">던전 컴퍼니</a>
         <a href="/crush/">던전 크러시</a>
-        <a href="/overtime">마왕님 야근 사수</a>
       </nav>
     </div>
     <div>
