@@ -319,3 +319,105 @@ table.odds .num{text-align:right;font-variant-numeric:tabular-nums}
   .grade{width:40px;height:40px;font-size:1rem}
   .ratingband span{font-size:.8rem}
 }
+
+/* ── 홈 「밝은 첫 화면」(2026-11-22, 인디나루 안 A 를 회사 홈에 — 대표 결정) ──
+   밝은 하늘 · 보라 빛 번짐 바탕 + 큰 문장 제목 + 게임 그림을 기울여 겹친 카드.
+   빨간 원 · 원에서 뻗는 햇살 · 네 갈래 반짝이 꼴 없음. 새 외부 글꼴 · 스크립트 없음. */
+.ha-hero{
+  --ha-navy:#131A2B;--ha-navy-2:#21374E;--ha-sky:#3F86D8;
+  position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(52rem 26rem at 8% -10%,rgba(143,179,220,.55),transparent 70%),
+    radial-gradient(38rem 24rem at 92% 18%,rgba(122,111,224,.22),transparent 72%),
+    radial-gradient(30rem 18rem at 70% 105%,rgba(63,134,216,.18),transparent 70%),
+    linear-gradient(180deg,#E2EAF4 0%,var(--surface) 100%);
+}
+.ha-in{max-width:var(--maxw);margin:0 auto;padding:80px var(--gut) 96px;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;align-items:center}
+.ha-copy{min-width:0}
+.ha-chip{display:inline-flex;align-items:center;padding:4px 14px;border-radius:999px;
+  background:rgba(255,255,255,.82);color:var(--ha-navy-2);font-size:.92rem;font-weight:700;letter-spacing:-.01em;
+  box-shadow:0 0 0 1px rgba(229,231,235,.9),0 1px 2px rgba(30,35,41,.07),0 6px 18px rgba(30,35,41,.08)}
+.ha-title{margin:18px 0 0;padding-bottom:.08em;text-wrap:balance;
+  font-size:clamp(2rem,4.6vw,3.25rem);line-height:1.12;letter-spacing:-.035em;
+  color:var(--ha-navy);
+  background:linear-gradient(100deg,var(--ha-navy) 0%,var(--ha-navy-2) 38%,var(--ha-sky) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ha-genres{display:block;color:var(--muted)}
+.ha-genres span{white-space:nowrap}
+.ha-line{margin:20px 0 0;max-width:30em;font-size:clamp(1rem,1.7vw,1.2rem);line-height:1.65;color:#3C4453}
+.ha-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.ha-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 24px;
+  border-radius:12px;font-weight:700;font-size:1rem;line-height:1.3;
+  background:var(--ha-navy);color:#fff;border:1px solid var(--ha-navy);
+  box-shadow:0 10px 24px -10px rgba(63,134,216,.8);transition:background .15s,box-shadow .15s}
+.ha-btn:hover{text-decoration:none;background:#000;border-color:#000}
+.ha-btn.ghost{background:#fff;color:var(--ha-navy);border-color:rgba(19,26,43,.2);
+  box-shadow:0 0 0 1px rgba(229,231,235,.6),0 6px 18px rgba(30,35,41,.08)}
+.ha-btn.ghost:hover{background:#EEF3F9;border-color:var(--ha-navy)}
+.ha-art{position:relative;min-width:0;height:22rem}
+.ha-art img{position:absolute;aspect-ratio:16/9;object-fit:cover;border-radius:16px;border:4px solid #fff;background:#fff}
+.ha-back{top:0;right:2%;width:72%;transform:rotate(4deg);opacity:.96;
+  box-shadow:0 24px 50px -20px rgba(33,55,78,.45)}
+.ha-front{bottom:0;left:2%;width:78%;transform:rotate(-3.5deg);
+  box-shadow:0 30px 60px -18px rgba(33,55,78,.55),0 8px 18px rgba(33,55,78,.18)}
+.ha-art .ha-icon{aspect-ratio:1;width:72px;height:72px;left:70%;bottom:-12px;
+  box-shadow:0 2px 4px rgba(30,35,41,.08),0 18px 40px rgba(30,35,41,.16)}
+
+.ha-games{background:var(--surface);padding:56px 0 96px}
+.ha-h2{display:flex;align-items:baseline;gap:8px;margin:0 0 20px;font-size:clamp(1.5rem,2.6vw,1.75rem);font-weight:900}
+.ha-count{font-size:1rem;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.ha-cards{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
+.ha-card{display:flex;flex-direction:column;min-width:0;background:#fff;border-radius:18px;overflow:hidden;
+  box-shadow:0 0 0 1px rgba(229,231,235,.7),0 2px 4px rgba(33,55,78,.06),0 18px 36px -14px rgba(33,55,78,.26);
+  transition:transform .2s,box-shadow .2s}
+.ha-card:hover{transform:translateY(-4px);
+  box-shadow:0 0 0 1px rgba(63,134,216,.35),0 4px 8px rgba(33,55,78,.08),0 28px 50px -16px rgba(63,134,216,.4)}
+.ha-shot{display:block;aspect-ratio:16/9;overflow:hidden;background:#E9EFF7}
+.ha-shot img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.ha-card:hover .ha-shot img{transform:scale(1.03)}
+.ha-shot.art{background:linear-gradient(160deg,#EEF3F9 0%,#DCE6F3 100%)}
+.ha-shot.art img{object-fit:contain;padding:14px 0 0}
+.ha-body{display:flex;flex-direction:column;flex:1;min-width:0;padding:0 20px 18px}
+.ha-body.plain{padding-top:42px} /* 배지(64 · 위로 32) + 제목 위 10 과 같은 높이 — 줄 맞춤 */
+.ha-badge{position:relative;width:64px;height:64px;margin:-32px 0 0;border-radius:16px;border:4px solid #fff;
+  background:#fff;object-fit:cover;box-shadow:0 2px 4px rgba(30,35,41,.08),0 12px 24px rgba(30,35,41,.14)}
+.ha-body h3{margin:10px 0 10px;font-size:1.22rem}
+.ha-body.plain h3{margin-top:0}
+.ha-body h3 a{color:var(--ha-navy,#131A2B)}
+.ha-tags{display:flex;flex-wrap:wrap;gap:6px}
+.ha-tag{font-size:.75rem;font-weight:700;line-height:1.5;padding:3px 10px;border-radius:999px;background:#E4EDF7;color:#21374E}
+.ha-tag.dim{background:var(--surface);color:#4A5364;box-shadow:inset 0 0 0 1px var(--line)}
+.ha-desc{margin:12px 0 18px;font-size:.94rem;line-height:1.7;color:#4A5364}
+.ha-foot{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}
+.ha-links{display:flex;flex-wrap:wrap;gap:6px}
+.ha-link{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:10px;
+  border:1px solid var(--line-2);background:#fff;color:#131A2B;font-size:.86rem;font-weight:700;line-height:1.2}
+.ha-link:hover{text-decoration:none;background:#EEF3F9;border-color:#21374E}
+.ha-link.off{color:var(--muted);border-style:dashed;background:transparent;cursor:default}
+.ha-go{margin-left:auto;display:inline-flex;align-items:center;gap:4px;min-height:40px;
+  font-size:.92rem;font-weight:700;color:#131A2B}
+.ha-go:hover{color:var(--sun-ink)}
+@media (max-width:900px){
+  .ha-in{grid-template-columns:1fr;gap:28px;padding:56px var(--gut) 64px}
+  .ha-art{width:100%;max-width:28rem;height:18rem;margin:0 auto}
+}
+@media (max-width:640px){
+  .ha-in{padding:40px var(--gut) 56px}
+  .ha-art{height:14rem}
+  .ha-art .ha-icon{width:56px;height:56px}
+  .ha-games{padding:44px 0 64px}
+}
+/* 상태 칩 · 만들고 있는 게임(11/24 게임 목록 — 출시 · 출시 예정 · 개발 중 · 기획 중) */
+.ha-tag.st-live{background:#E3F4E8;color:#18763A}
+.ha-tag.st-soon{background:#FDF1E6;color:var(--sun-ink)}
+.ha-tag.st-dev{background:#E4EDF7;color:#21374E}
+.ha-tag.st-plan{background:var(--surface);color:#4A5364;box-shadow:inset 0 0 0 1px var(--line)}
+.ha-h3{margin:44px 0 4px;font-size:1.2rem}
+.ha-note{margin:0 0 16px;font-size:.92rem;color:var(--muted)}
+.ha-next{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr))}
+.ha-mini{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0;padding:16px 18px;
+  background:#fff;border-radius:14px;box-shadow:0 0 0 1px rgba(229,231,235,.8),0 6px 18px -10px rgba(33,55,78,.18)}
+.ha-mini b{font-size:1.02rem;color:#131A2B;line-height:1.4}
+.ha-games .ha-mini .ha-tag.st-plan{background:#F4F6F9}
