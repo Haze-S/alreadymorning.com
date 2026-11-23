@@ -24,7 +24,7 @@ JOBS = [
     ("store/screenshots/02-specials.png",   "crush-shot-specials.webp",    (540, 960),  False),
     ("store/screenshots/01-map.png",        "crush-shot-map.webp",         (540, 960),  False),
     ("store/screenshots/03-boss-card.png",  "crush-shot-boss-card.webp",   (540, 960),  False),
-    # icon-512 도 바탕에 방사 줄무늬가 있어 사이트에 쓰지 않는다(아이콘 자체는 크러시 팀 판단)
+    ("store/icon-512.png",                  "crush-icon.webp",             (256, 256),  False),  # 보라 방사 바탕 + 노란 별은 금지 꼴 아님(CTO 11/21)
 ]
 
 QUALITY = 82

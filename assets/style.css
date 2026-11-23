@@ -409,3 +409,15 @@ table.odds .num{text-align:right;font-variant-numeric:tabular-nums}
   .ha-art .ha-icon{width:56px;height:56px}
   .ha-games{padding:44px 0 64px}
 }
+/* 상태 칩 · 만들고 있는 게임(11/24 게임 목록 — 출시 · 출시 예정 · 개발 중 · 기획 중) */
+.ha-tag.st-live{background:#E3F4E8;color:#18763A}
+.ha-tag.st-soon{background:#FDF1E6;color:var(--sun-ink)}
+.ha-tag.st-dev{background:#E4EDF7;color:#21374E}
+.ha-tag.st-plan{background:var(--surface);color:#4A5364;box-shadow:inset 0 0 0 1px var(--line)}
+.ha-h3{margin:44px 0 4px;font-size:1.2rem}
+.ha-note{margin:0 0 16px;font-size:.92rem;color:var(--muted)}
+.ha-next{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr))}
+.ha-mini{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0;padding:16px 18px;
+  background:#fff;border-radius:14px;box-shadow:0 0 0 1px rgba(229,231,235,.8),0 6px 18px -10px rgba(33,55,78,.18)}
+.ha-mini b{font-size:1.02rem;color:#131A2B;line-height:1.4}
+.ha-games .ha-mini .ha-tag.st-plan{background:#F4F6F9}
